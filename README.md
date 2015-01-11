@@ -45,6 +45,17 @@
   sudo su - db2inst1 -c 'db2 create db demo_dev'
   ```
 
+10. Point the Rails app to the new database (`config/database.yml`)
+
+  ```yaml
+  default: &default
+    adapter: ibm_db
+    username: db2inst1
+    password: db2inst1
+    schema: db2inst1
+    host: localhost
+  ```
+
 ## DB2 SQL Console Tips
 
 ```

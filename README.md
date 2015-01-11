@@ -32,6 +32,7 @@ username: db2inst1
 password: db2inst1
 schema: db2inst1
 host: localhost
+database: demo_dev
 ```
 
 ## DB2 SQL Console Tips:

@@ -72,5 +72,5 @@ Vagrant.configure(2) do |config|
   # SHELL
 
   config.vm.provision 'base',   type: :shell, path: 'bin/provision.sh'
-  config.vm.provision 'rails',  type: :shell, path: 'bin/install-rails.sh', privileged: false
+  config.vm.provision 'rails',  type: :shell, path: 'bin/install-ruby.sh', privileged: false
 end

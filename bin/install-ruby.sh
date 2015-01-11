@@ -22,19 +22,20 @@ rbenv install 2.1.5
 rbenv global 2.1.5
 rbenv rehash
 
-echo "Install Ruby on Rails with IBM DB2 Adapter..."
-
-gem install ibm_db
-gem install rails -v 4.1.9
-rails new demo -d ibm_db
-
 cat << EOF
 -------------------------------------------------------------------
 Installation Complete
 -------------------------------------------------------------------
 
+Install Ruby on Rails with IBM DB2 Adapter
+
+$ gem install ibm_db
+$ gem install rails -v 4.1.9
+$ rails new demo -d ibm_db
+
 You will need to manually create your database using:
-sudo su - db2inst1 -c 'db2 create db demo_dev'
+
+$ sudo su - db2inst1 -c 'db2 create db demo_dev'
 
 Also, point the Rails app to the new database (config/database.yml)
 
@@ -44,10 +45,9 @@ password: db2inst1
 schema: db2inst1
 host: localhost
 
-
 DB2 SQL Console Tips:
 
-sudo su - db2inst1 -c 'db2' # Drops you in the SQL Console
+$ sudo su - db2inst1 -c 'db2' # Drops you in the SQL Console
 db2 => connect to demo_dev
 db2 => list tables
 db2 => describe table <table-name>

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 cat << SOURCES > /etc/apt/sources.list.d/partner-ppa.list
 deb http://archive.canonical.com/ubuntu precise partner
 deb-src http://archive.canonical.com/ubuntu precise partner

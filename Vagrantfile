@@ -71,5 +71,6 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install apache2
   # SHELL
 
-  config.vm.provision :shell, path: 'bin/provision.sh'
+  config.vm.provision 'base',   type: :shell, path: 'bin/provision.sh'
+  config.vm.provision 'rails',  type: :shell, path: 'bin/install-rails.sh', privileged: false
 end
